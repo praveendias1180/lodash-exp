@@ -36,3 +36,12 @@ const user = {
 
 console.log(_.get(user, 'location.timezone', {}));
 console.log(_.get(user, 'name.last', ''));
+
+const users2 = [
+    { 'user': 'fred',   'age': 48 },
+    { 'user': 'barney', 'age': 36 },
+    { 'user': 'fred',   'age': 40 },
+    { 'user': 'barney', 'age': 34 }
+  ];
+
+  console.log(_.sortBy(users2, [function(user) { return user.age }]));   
